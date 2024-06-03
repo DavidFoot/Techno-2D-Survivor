@@ -32,7 +32,7 @@ public class InputManager : MonoBehaviour
         }
 
         if(Input.GetMouseButtonDown(0))m_playerController.StartShooting();
-        if (Input.GetMouseButtonUp(0)) m_playerController.StopShooting();
+        if(Input.GetMouseButtonUp(0))  m_playerController.StopShooting();
         
 
     }

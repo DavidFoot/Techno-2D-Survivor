@@ -371,10 +371,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f8c996a18e5a1a4ab36e835d2c6359c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlayerMovementSpeed: 3
+  m_PlayerMovementSpeed: 2
   m_basicWeapon: {fileID: 127930205447676639, guid: 8e3bbcc1d3308954f99540cbd7c2862e, type: 3}
-  m_weapon_delay: 1
   m_isShooting: 0
+  m_projectile: {fileID: 7536896007701484883, guid: 8e3bbcc1d3308954f99540cbd7c2862e, type: 3}
 --- !u!50 &605655555
 Rigidbody2D:
   serializedVersion: 4

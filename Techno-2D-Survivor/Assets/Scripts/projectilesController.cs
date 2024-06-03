@@ -3,7 +3,8 @@ using UnityEngine;
 public class projectilesController : MonoBehaviour
 {
     private Transform m_origine;
-    private float m_velocity=5f;
+    [SerializeField] private float m_velocity=6f;
+    [SerializeField] public float m_weaponDelay;
     // Start is called before the first frame update
     void Start()
     {

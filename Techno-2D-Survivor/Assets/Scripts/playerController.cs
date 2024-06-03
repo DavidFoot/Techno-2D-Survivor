@@ -1,26 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
-using Unity.VisualScripting;
+
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class playerController : MonoBehaviour
 {
     [SerializeField] public float m_PlayerMovementSpeed = 3f;
     [SerializeField] public GameObject m_basicWeapon;
-    [SerializeField] public float m_weapon_delay=0.5f;
     [SerializeField] public bool m_isShooting=false;
+    [SerializeField] public projectilesController m_projectile;
     private float m_shootTimer;
     private Vector2 m_cursorWorldPosition;
     private Camera m_camera;
-    private Coroutine m_SHOOT;
 
     // Start is called before the first frame update
     void Start()
     {
         m_camera = Camera.main;
-        m_SHOOT = StartCoroutine("ShootWeapon");
+        m_projectile = GetComponent<projectilesController>();
+        //StartCoroutine("ShootWeapon");
     }
 
     // Update is called once per frame
@@ -32,7 +28,9 @@ public class playerController : MonoBehaviour
             if(m_shootTimer <= 0)
             {
                 Shoot();
-                m_shootTimer = m_weapon_delay;
+                //Debug.Log(m_projectile.m_weaponDelay);
+                //m_shootTimer = m_projectile.m_weaponDelay;
+                m_shootTimer = 0.3f;
             }
         }
     }
