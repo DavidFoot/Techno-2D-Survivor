@@ -14,24 +14,23 @@ public class InputManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.RightArrow))
+        if(Input.GetKey(KeyCode.D))
         {
             transform.Translate(new Vector2(1, 0) * m_playerController.m_PlayerMovementSpeed * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.A))
         {
             transform.Translate(new Vector2(-1, 0) * m_playerController.m_PlayerMovementSpeed * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.W))
         {
             transform.Translate(new Vector2(0, 1) * m_playerController.m_PlayerMovementSpeed * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.S))
         {
             transform.Translate(new Vector2(0, -1) * m_playerController.m_PlayerMovementSpeed * Time.deltaTime);
         }
-
-        if(Input.GetMouseButtonDown(0))m_playerController.StartShooting();
+        if (Input.GetMouseButtonDown(0))m_playerController.StartShooting();
         if(Input.GetMouseButtonUp(0))  m_playerController.StopShooting();
         
 

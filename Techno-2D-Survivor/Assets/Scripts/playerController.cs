@@ -7,6 +7,7 @@ public class playerController : MonoBehaviour
     [SerializeField] public GameObject m_basicWeapon;
     [SerializeField] public bool m_isShooting=false;
     [SerializeField] public projectilesController m_projectile;
+    private Vector2 m_Direction;
     private float m_shootTimer;
     private Vector2 m_cursorWorldPosition;
     private Camera m_camera;
@@ -22,6 +23,10 @@ public class playerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        m_cursorWorldPosition = m_camera.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
+        m_Direction = m_cursorWorldPosition - (Vector2)transform.position;
+        m_Direction.Normalize();
+        transform.up = m_Direction;
         if (m_isShooting)
         {
             m_shootTimer -= Time.deltaTime;
@@ -47,11 +52,8 @@ public class playerController : MonoBehaviour
     }
     public void Shoot()
     {
-        m_cursorWorldPosition = m_camera.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
-        var direction = m_cursorWorldPosition - (Vector2)transform.position;
-        direction.Normalize();
         GameObject m_projectiles = Instantiate(m_basicWeapon, transform.position, Quaternion.identity);
-        m_projectiles.GetComponent<projectilesController>().MoveProjectiles(direction, transform);
+        m_projectiles.GetComponent<projectilesController>().MoveProjectiles(m_Direction, transform);
     }
     //private IEnumerator ShootWeapon()
     //{
