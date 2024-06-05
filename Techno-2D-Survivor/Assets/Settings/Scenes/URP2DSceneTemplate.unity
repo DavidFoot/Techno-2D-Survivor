@@ -320,7 +320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 227f8793abd044043aca7326d6497af5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_spaceShip: {fileID: 0}
+  m_spaceShip: {fileID: 1747148461}
   m_skybox: {fileID: 866876704}
 --- !u!1 &523204496
 GameObject:
@@ -690,7 +690,7 @@ Transform:
   m_GameObject: {fileID: 866876704}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0473, z: 10}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -867,6 +867,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1747148461 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7532077156464097221, guid: 5c8cdab5f1d894945ad00cf24002da03, type: 3}
+  m_PrefabInstance: {fileID: 1394829681}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2075137453
 GameObject:
   m_ObjectHideFlags: 0
