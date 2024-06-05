@@ -5,6 +5,7 @@ public class projectilesController : MonoBehaviour
     private Transform m_origine;
     [SerializeField] private float m_velocity=6f;
     [SerializeField] public float m_weaponDelay;
+    [SerializeField] public float m_maxLifeDistance;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,7 @@ public class projectilesController : MonoBehaviour
             Vector2 m_distance = (Vector2)transform.position - (Vector2) m_origine.position;
             Vector2 m_direction = m_distance.normalized;
             float m_vectorLength = m_distance.sqrMagnitude;
-            if (m_vectorLength >= 6*6)
+            if (m_vectorLength >= m_maxLifeDistance * m_maxLifeDistance)
             //float m_distance = Vector2.Distance(transform.position, m_origine.position);
             //if(m_distance >= 6)
             {
