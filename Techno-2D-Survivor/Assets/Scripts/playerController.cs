@@ -17,7 +17,6 @@ public class playerController : MonoBehaviour
     {
         m_camera = Camera.main;
         m_projectile = GetComponent<projectilesController>();
-        //StartCoroutine("ShootWeapon");
     }
 
     // Update is called once per frame
@@ -33,8 +32,6 @@ public class playerController : MonoBehaviour
             if(m_shootTimer <= 0)
             {
                 Shoot();
-                //Debug.Log(m_projectile.m_weaponDelay);
-                //m_shootTimer = m_projectile.m_weaponDelay;
                 m_shootTimer = 0.3f;
             }
         }
