@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7532077156464097221}
   - component: {fileID: 9085727145428994203}
+  - component: {fileID: 1116533160728999643}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -46,6 +47,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_player: {fileID: 5765274476392361717}
+--- !u!114 &1116533160728999643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6847824830297724167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f8c996a18e5a1a4ab36e835d2c6359c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PlayerMovementSpeed: 2
+  m_basicWeapon: {fileID: 127930205447676639, guid: 8e3bbcc1d3308954f99540cbd7c2862e, type: 3}
+  m_isShooting: 0
+  m_projectile: {fileID: 0}
 --- !u!1001 &6596719486929381606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -98,7 +115,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7983058809739433951, guid: bd63fed038d1b6f488d1a7646d263848, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

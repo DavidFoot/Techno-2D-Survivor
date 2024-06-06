@@ -1,14 +1,13 @@
 
-using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
-    [SerializeField] private GameObject m_player;
+    //[SerializeField] private GameObject m_player;
     private playerController m_playerController;
     void Start()
     {
-        m_playerController = m_player.GetComponent<playerController>();
+        m_playerController = GetComponent<playerController>();
     }
 
     // Update is called once per frame
@@ -16,22 +15,22 @@ public class InputManager : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.D))
         {
-            transform.Translate(new Vector2(1, 0) * m_playerController.m_PlayerMovementSpeed * Time.deltaTime);
+            transform.Translate(transform.InverseTransformDirection(new Vector2(1, 0)) * m_playerController.m_PlayerMovementSpeed * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Translate(new Vector2(-1, 0) * m_playerController.m_PlayerMovementSpeed * Time.deltaTime);
+            transform.Translate(transform.InverseTransformDirection(new Vector2(-1, 0)) * m_playerController.m_PlayerMovementSpeed * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.W))
         {
-            transform.Translate(new Vector2(0, 1) * m_playerController.m_PlayerMovementSpeed * Time.deltaTime);
+            transform.Translate(transform.InverseTransformDirection(Vector3.up) * m_playerController.m_PlayerMovementSpeed * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.S))
         {
-            transform.Translate(new Vector2(0, -1) * m_playerController.m_PlayerMovementSpeed * Time.deltaTime);
+            transform.Translate(transform.InverseTransformDirection(new Vector2(0, -1)) * m_playerController.m_PlayerMovementSpeed * Time.deltaTime);
         }
-        if (Input.GetMouseButtonDown(0))m_playerController.StartShooting();
-        if(Input.GetMouseButtonUp(0))  m_playerController.StopShooting();
+        if (Input.GetMouseButtonDown(0)) m_playerController.StartShooting();
+        if (Input.GetMouseButtonUp(0))   m_playerController.StopShooting();
         
 
     }
