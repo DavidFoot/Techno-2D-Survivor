@@ -66,7 +66,11 @@ MonoBehaviour:
     the 2D Renderer in Universal RP.
   preview: {fileID: -3604256930052969394}
   dependencies:
+  - dependency: {fileID: 2800000, guid: 23dd548b32599cc41b67f3dae5a2b93e, type: 3}
+    instantiationMode: 0
   - dependency: {fileID: 2800000, guid: 48b6dc49191c7254b8101bf714fcea87, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: dfb3070e6d913ac4da35592f1cd7a606, type: 3}
     instantiationMode: 0
   - dependency: {fileID: 832638144152897043, guid: bd63fed038d1b6f488d1a7646d263848, type: 3}
     instantiationMode: 0
@@ -76,6 +80,10 @@ MonoBehaviour:
     instantiationMode: 0
   - dependency: {fileID: 127930205447676639, guid: 8e3bbcc1d3308954f99540cbd7c2862e, type: 3}
     instantiationMode: 0
+  - dependency: {fileID: 99375458372353080, guid: 1df5591572da618419d8bd8f81fadb51, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 299729981285737261, guid: 83f4ced0f83675941becc2e05a7f5789, type: 3}
+    instantiationMode: 0
   - dependency: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     instantiationMode: 0
   - dependency: {fileID: 6847824830297724167, guid: 5c8cdab5f1d894945ad00cf24002da03, type: 3}
@@ -84,14 +92,12 @@ MonoBehaviour:
     instantiationMode: 0
   - dependency: {fileID: 2800000, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
     instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: b5a611630ebab2345bd0c9b7e6e38709, type: 3}
+    instantiationMode: 0
   - dependency: {fileID: 2800000, guid: 13666dab521145a4f831f980fa0d4af6, type: 3}
     instantiationMode: 0
-  - dependency: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - dependency: {fileID: 4050447678991255358, guid: d32f8f3f0d1acd942a7e62de5097da44, type: 3}
     instantiationMode: 0
-  - dependency: {fileID: 3634243602619758375, guid: 69efeb245e7e4d9429ba5fd6229480d7, type: 3}
-    instantiationMode: 0
-  - dependency: {fileID: 8300000, guid: 6c09e0c934daa9d40b997ec4cc850c8c, type: 3}
-    instantiationMode: 1
   templatePipeline: {fileID: 0}
   badge: {fileID: 0}
   addToDefaults: 1
